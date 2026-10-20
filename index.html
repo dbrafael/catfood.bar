@@ -12,6 +12,7 @@
 </head>
 <body>
   <main>
+    <div class="stage">
     <button class="cat" id="cat" type="button" aria-label="Pet the cat">
 <span class="art cat-asleep">      |\      _,,,---,,_
 <span class="snore">ZZZzz</span> /,`.-'`'    -.  ;-;;,_
@@ -25,11 +26,17 @@
  ( (  )   (  ) )
 (__(__)___(__)__)</span>
     </button>
+    <button class="bowl" id="bowl" type="button" aria-label="Feed the cat">
+<span class="art"> <span class="food">     </span>
+\_____/</span>
+    </button>
+    </div>
     <h1>catfood.bar<span class="cursor" aria-hidden="true"></span></h1>
     <nav>
       <a href="https://github.com/dbrafael">portfolio</a>
       <a id="home-link" aria-disabled="true" title="The cat is asleep. Only reachable from the home network.">home</a>
     </nav>
+    <p class="meals" id="meals" hidden></p>
   </main>
 </body>
 </html>
