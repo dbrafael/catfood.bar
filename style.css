@@ -43,17 +43,49 @@ main {
 }
 
 .cat {
+  position: relative;
   display: grid;
   align-items: end;
   justify-items: center;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0.5rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
   font-size: clamp(0.75rem, 2.6vw, 1.05rem);
+  text-shadow: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.cat pre {
+.cat:focus-visible {
+  outline: 1px dashed var(--dim);
+}
+
+.purr {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  animation: purr 1.4s ease-out forwards;
+}
+
+@keyframes purr {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-2.5rem);
+  }
+}
+
+.art {
   grid-area: 1 / 1;
-  margin: 0;
-  font: inherit;
+  display: block;
+  white-space: pre;
   text-align: left;
 }
 
@@ -108,6 +140,15 @@ h1 {
   .cursor,
   .snore {
     animation: none;
+  }
+
+  @keyframes purr {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 }
 
